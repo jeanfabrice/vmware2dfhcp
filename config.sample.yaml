@@ -1,0 +1,10 @@
+---
+dhcp_address: localhost
+dhcp_group: ''
+dhcp_key_name: omapi_key
+dhcp_key_value: REVGQVVMVF9ESENQX0tFWV9WQUxVRQ==
+dhcp_port: 7991
+vm_networks: []
+vc_address: localhost
+vc_password: password
+vc_username: admin

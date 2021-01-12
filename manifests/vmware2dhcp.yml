@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: vmware2dhcp
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vmware2dhcp
+  namespace: vmware2dhcp
+  labels:
+    app: vmware2dhcp
+spec:
+  selector:
+    matchLabels:
+      app: vmware2dhcp
+  template:
+    metadata:
+      labels:
+        app: vmware2dhcp
+    spec:
+      containers:
+        - name: vmware2dhcp
+          envFrom:
+          - secretRef:
+              name: vmware2dhcp-secrets
+          image: jeanfabrice//vmware2dhcp:0.0.8
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 500m
+              memory: 200Mi
+            requests:
+              cpu: 10m
+              memory: 50Mi
+      terminationGracePeriodSeconds: 10

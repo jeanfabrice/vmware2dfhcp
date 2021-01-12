@@ -1,0 +1,5 @@
+pypureomapi~=0.6
+pytz~=2018.9
+pyvmomi~=6.7
+PyYAML~=5.1
+prometheus-client~=0.6

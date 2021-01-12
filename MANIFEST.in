@@ -1,0 +1,1 @@
+include config.sample.yaml vmware2dhcp/VERSION
